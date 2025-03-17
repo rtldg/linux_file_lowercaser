@@ -6,7 +6,7 @@ public Plugin myinfo =
 	author = "rtldg",
 	description = "patches server-side for https://github.com/ValveSoftware/source-sdk-2013/issues/865",
 	version = "1",
-	url = "https://github.com/rtldg/linux_file_lowercase"
+	url = "https://github.com/rtldg/linux_file_lowercaser"
 }
 
 #include <dhooks>
