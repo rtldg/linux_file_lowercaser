@@ -1,0 +1,64 @@
+"Games"
+{
+	"#default"
+	{
+		"#supported"
+		{
+			"engine"    "css"
+			"engine"    "tf2"   // untested
+			"engine"    "hl2dm" // untested
+			"engine"    "dods"  // untested
+		}
+
+		"Signatures"
+		{
+			"CUtlFilenameSymbolTable::FindFileName"
+			{
+				"library"       "dedicated"
+				"linux"         "@_ZN23CUtlFilenameSymbolTable12FindFileNameEPKc"
+				"linux64"       "@_ZN23CUtlFilenameSymbolTable12FindFileNameEPKc"
+			}
+
+			"CUtlFilenameSymbolTable::FindOrAddFileName"
+			{
+				"library"       "dedicated"
+				"linux"         "@_ZN23CUtlFilenameSymbolTable17FindOrAddFileNameEPKc"
+				"linux64"       "@_ZN23CUtlFilenameSymbolTable17FindOrAddFileNameEPKc"
+			}
+		}
+
+		"Functions"
+		{
+			// FileNameHandle_t CUtlFilenameSymbolTable::FindFileName( const char *pFileName )
+			"CUtlFilenameSymbolTable::FindFileName"
+			{
+				"signature" "CUtlFilenameSymbolTable::FindFileName"
+				"callconv"  "thiscall"
+				"return"    "int"
+				"this"      "ignore"
+				"arguments"
+				{
+					"result"
+					{
+						"type" "charptr"
+					}
+				}
+			}
+			// FileNameHandle_t CUtlFilenameSymbolTable::FindOrAddFileName( const char *pFileName )
+			"CUtlFilenameSymbolTable::FindOrAddFileName"
+			{
+				"signature" "CUtlFilenameSymbolTable::FindOrAddFileName"
+				"callconv"  "thiscall"
+				"return"    "int"
+				"this"      "ignore"
+				"arguments"
+				{
+					"result"
+					{
+						"type" "charptr"
+					}
+				}
+			}
+		}
+	}
+}
