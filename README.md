@@ -5,6 +5,8 @@ relevant issue here: https://github.com/ValveSoftware/Source-1-Games/issues/6868
 
 i tracked the problem down [here](https://github.com/ValveSoftware/source-sdk-2013/issues/865) and @shavitush made a [client-side hook](https://github.com/ValveSoftware/Source-1-Games/issues/6868#issuecomment-2707662934) to fix it (which requires `-insecure`), but servers still encounter the issue so here's a sourcemod plugin to fix it too
 
+note: it might not work for the first map that's loaded on a server because the plugin doesn't load before map files are mounted maybe I guess idk?
+
 
 ## HOW ARE SERVERS BROKEN
 bsps that pack models will possibly have collision problems so that's the most visible place
